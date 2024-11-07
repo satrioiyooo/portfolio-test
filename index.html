@@ -968,8 +968,9 @@
           <section class="contact-form">
             <h3 class="h3 form-title">Contact Form</h3>
 
-            <form class="form" data-form>
+            <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
               <div class="input-wrapper">
+                <input type="hidden" name="access_key" value="a337bd70-3665-4cf4-a51e-c6cec8025b0f" />
                 <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input />
                 <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input />
               </div>

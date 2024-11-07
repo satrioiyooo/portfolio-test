@@ -98,7 +98,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 }
 
 // contact form variables
-// const form = document.querySelector("[data-form]");
+const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
@@ -136,30 +136,30 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // script.js
 // public/assets/js/script.js
-const form = document.querySelector("[data-form]");
+// const form = document.querySelector("[data-form]");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+// form.addEventListener("submit", async (e) => {
+//   e.preventDefault();
 
-  const formData = new FormData(form);
-  const formObject = Object.fromEntries(formData);
+//   const formData = new FormData(form);
+//   const formObject = Object.fromEntries(formData);
 
-  try {
-    const response = await fetch("/api/submit-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formObject),
-    });
-    const data = await response.json();
-    // Handle response
-    if (data.success) {
-      alert("Message sent successfully!");
-      form.reset();
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Failed to send message");
-  }
-});
+//   try {
+//     const response = await fetch("/api/submit-form", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(formObject),
+//     });
+//     const data = await response.json();
+//     // Handle response
+//     if (data.success) {
+//       alert("Message sent successfully!");
+//       form.reset();
+//     }
+//   } catch (error) {
+//     console.error("Error:", error);
+//     alert("Failed to send message");
+//   }
+// });
